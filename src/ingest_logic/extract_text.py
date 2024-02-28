@@ -1,8 +1,10 @@
 import fitz
 
+
 class TextExtraction:
     def __init__(self) -> None:
-        pass
+        """
+        """
 
     def extract_text(self, file_name, start_page=1, end_page=None):
         doc = fitz.open(file_name)
@@ -21,7 +23,3 @@ class TextExtraction:
         doc.close()
         return page_infos
 
-if __name__ == "__main__":
-    file_name = "dataset/testv1.pdf"
-    extraction = TextExtraction()
-    extraction.extract_text(file_name, 1)
